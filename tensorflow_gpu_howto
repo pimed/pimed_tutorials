@@ -1,0 +1,25 @@
+How to get tensorflow-gpu working on your personal computer:
+
+Resources:
+https://medium.com/@lmoroney_40129/installing-tensorflow-with-gpu-on-windows-10-3309fec55a00
+https://towardsdatascience.com/tensorflow-gpu-installation-made-easy-use-conda-instead-of-pip-52e5249374bc
+
+First- check whether your gpu is cuda compatible:
+1. type    control /name Microsoft.DeviceManager    in command prompt (cmd)
+2. Your gpu(s) is/are listed under Display Adapters, you can check if this is cuda compatible on the nvidia website
+3. if there is a triangle with an exclamation point next to your gpu, your driver update might have messed things up. 
+   Right click on the gpu and select properties. Select roll back driver update. This should fix the problem and the
+   comment in the properties should say device working properly.
+   
+Second - install anaconda if you don't have it already
+
+Third - open anaconda prompt and type : conda create --name tf_gpu tensorflow-gpu
+    This creates a new environment and installs everything necessary for tensorflow-gpu, including the right cuda and cudnn version
+    
+Last - check your installation by typing:
+1. conda activate tf_gpu
+2. python
+3. sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+The log_device_placement argument prints the gpu detected. Make sure the name of your gpu is printed in the console.
+
+Happy Deep Learning!
