@@ -22,4 +22,15 @@ Last - check your installation by typing:
 3. sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 The log_device_placement argument prints the gpu detected. Make sure the name of your gpu is printed in the console.
 
-Happy Deep Learning!
+NOTE: Driver Issues
+Although all the previous steps may work, you might still get an error when you actually start training your network. 
+If you get a cuda driver error that says the driver is too old, you need to update the driver (not all of CUDA!)
+Go to this website: https://www.nvidia.com/Download/index.aspx
+Input the information specific to the gpu you are using and download that driver
+If the installation fails, read the error. 
+If you are using a GeForce gpu the error will direct you to download a driver installer specific to GeForce
+Download that installer and run the application
+Go to drivers and check for updates - update the necessary drivers
+Try to run your training again - you might have to restart your computer
+
+Good Luck and Happy Deep Learning!
