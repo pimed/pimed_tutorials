@@ -33,4 +33,12 @@ Download that installer and run the application
 Go to drivers and check for updates - update the necessary drivers
 Try to run your training again - you might have to restart your computer
 
+TroubleShooting Tips:
+1. If you updated the NVIDIA driver and your computer is now crashing when you train your program, try updating your Windows - 
+   This will most likely update the driver and update it to a version that will not crash your Windows system
+2. I have been unsuccessful in trying to download specific drivers - it seems to only work through GeForce/NVIDIA directly
+   (not even apt-get commands), and Windows updates
+   
+Please feel free to post an issue regarding a problem you are facing that is not covered here and I will try my best to help!
+
 Good Luck and Happy Deep Learning!
